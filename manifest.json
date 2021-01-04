@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "GoTo",
+    "version": "0.1",
+
+    "description": "Add a tag to current position and quickly back.",
+
+    "icons": {
+        "32": "images/icon32-active.png",
+        "64": "images/icon64-active.png",
+        "128": "images/icon128-active.png"
+    },
+
+    "browser_action": {
+        "default_icon": {
+            "32": "images/icon32-inactive.png",
+            "64": "images/icon64-inactive.png",
+            "128": "images/icon128-inactive.png"
+        },
+        "default_title": "Chrome Programmatic Injection is inactive"
+    },
+
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+
+    "minimum_chrome_version": "52",
+
+    "permissions": [
+        "activeTab"
+    ]
+}

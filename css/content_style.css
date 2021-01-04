@@ -1,0 +1,15 @@
+#gotocontainer {
+  z-index: 999999;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+#tagbtn {
+  margin-bottom: 10px;
+}
+
+#tagscontainer li {
+  list-style: none;
+  margin-bottom: 2px;
+}
