@@ -57,11 +57,11 @@
 
 ### Installation
 
-1. Download the latest released zip file.
+1. Download the latest released [goto.crx](https://github.com/JKooll/goto/releases) file.
 
-2. Go to chrome extension management page.
+2. Open chrome extension management page [chrome://extensions/](chrome://extensions/).
 
-3. Upload the zip file to chrome.
+3. Drag the goto.crx file to this page.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
