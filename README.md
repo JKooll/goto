@@ -53,7 +53,7 @@
 
 ### Prerequisites
 
-- Minimum Chrome Extension: 52
+- Minimum Chrome Version: 52
 
 ### Installation
 
