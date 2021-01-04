@@ -1,50 +1,125 @@
-# Programmatic injection setup for Google Chrome extensions
-This repository contains the setup for [programmatic injection](https://developer.chrome.com/extensions/content_scripts#pi) of JS and CSS into a given page when you click on the browser action icon. It makes it easier to start coding your Chrome extension by eliminating a lot of the front setup.
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-- Displays whether the extension is active on the current tab
-- Supports JS and CSS injection
-- You can disable and enable the content script by clicking on the browser action icon
 
-![Example of extension being enabled and disabled](https://i.imgur.com/ZcRujH4.png)
 
-This setup is useful if you want to be able to toggle your content script on and off; if you just need to run your code every time you click on the browser action icon, you should look into this [bare minimum setup](https://gist.github.com/danharper/8364399).
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/JKooll/go">
+    <img src="images/icon128-active.png" alt="Logo" width="80" height="80">
+  </a>
 
-## Quick Start
+  <h3 align="center">GoTo Chrome Extension</h3>
 
-### Step 1: Fork or clone this repository
-Fork this repo, and rename the repository to whatever you're developing.
+  <p align="center">
+    A chrome extension for tagging page scroll position.
+    <br />
+    <a href="https://github.com/JKooll/goto"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/JKooll/goto/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/JKooll/goto/issues">Request Feature</a>
+  </p>
+</p>
 
-### Step 2: Customize the manifest file
-Enter the name of your extension, a description and many other options by editing the `manifest.json` file.
 
-### Step 3: Replace the icons
-This repository provides a very generic icon, that you may want to replace. It comes in two version; a dark one for when the extension is active, and a greyed out version for when it's inactive.
 
-The darker one must be provided in the following sizes:
-- 16x16px
-- 24x24px
-- 32x32px
-- 48x48px
-- 128x128px
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
 
-The greyed out one can be provided just using the following sizes:
-- 16x16px
-- 24x24px
-- 32x32px
+<!-- GETTING STARTED -->
+## Getting Started
 
-If you're changing file names, make sure you're changing the name of the icons in the `manifest.json` file as well. Make sure you're reloading the extension from `chrome://extensions` after any change to `manifest.json`.
+### Prerequisites
 
-### Step 4: Write JS and CSS!
-You can now write your content scripts! Simply edit `js/content_script.js`.
+- Minimum Chrome Extension: 52
 
-- If you need to inject more than one script, you can add it to the `jsInjects` or `cssInjects` arrays in `background.js`. Make sure you add them in the correct order if you have any dependencies.
-- If you are applying styles to elements on the page, you can chose only to enable them when the body has the `extension-enabled` class, or to override them when the body has the `extension-disabled` class.
-- You can use the `enabled` variable in `content_script.js` to know whether or not to do certain things
-- If there's anything you need to hide, reset or undo when the content script is disabled, you can do it at the commented lines in `content_script.js`
+### Installation
 
-## Local development
-You can install the unpackaged extension from the source code by opening a new tab and typing `chrome://extensions`. You'll need to activate the developer mode, click on "Load unpacked extension..." and select the source folder.
+1. Download the latest released zip file.
 
-If you modify `manifest.json` while the unpacked extension is installed, you'll have to reload it from `chrome://extensions`.
+2. Go to chrome extension management page.
 
-Please note that installing extensions this way is suitable for development purposes only; since Chrome 34 (2014), a warning popup will be displayed at every startup of the browser (to the [annoyance of every developer in the world](https://bugs.chromium.org/p/chromium/issues/detail?id=337734#c4)). The only way ([almost](https://stackoverflow.com/questions/23055651/disable-developer-mode-extensions-pop-up-in-chrome/38011386#38011386)) not to get the popup is to publish and install the extension through the Chrome Webstore.
+3. Upload the zip file to chrome.
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+### Active Extension
+
+Click the extension button, the active status of the icon is red.
+
+### Active Extension
+Click the extension button, the inactive status of the icon is gray.
+
+### Go to top of the page
+
+Click the "Top" button.
+
+### Create a new tag
+
+Click the "TAG!" button.
+
+### Remove a tag
+
+Doulbe click the tag button.
+
+<!-- ROADMAP -->
+## Roadmap
+
+See the [open issues](https://github.com/JKooll/goto/issues) for a list of proposed features (and known issues).
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/JKooll/goto.svg?style=for-the-badge
+[contributors-url]: https://github.com/JKooll/goto/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/JKooll/goto.svg?style=for-the-badge
+[forks-url]: https://github.com/JKooll/goto/network/members
+[stars-shield]: https://img.shields.io/github/stars/JKooll/goto.svg?style=for-the-badge
+[stars-url]: https://github.com/JKooll/goto/stargazers
+[issues-shield]: https://img.shields.io/github/issues/JKooll/goto.svg?style=for-the-badge
+[issues-url]: https://github.com/JKooll/goto/issues
+[license-shield]: https://img.shields.io/github/license/JKooll/goto.svg?style=for-the-badge
+[license-url]: https://github.com/JKooll/go/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/shuquanzhao
