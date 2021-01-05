@@ -5,8 +5,6 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -48,6 +46,9 @@
   </ol>
 </details>
 
+## Why GoTo Chrome Extension?
+When I read Laravel documentation, the documentation page is too long. I have to scroll top and bottom many times and waste my too much time. So I were starting to create a extension help me memory the page scroll position. This is why I create GoTo chrome Extension.
+
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -57,11 +58,15 @@
 
 ### Installation
 
-1. Download the latest released [goto.crx](https://github.com/JKooll/goto/releases) file.
+1. Download the latest released [Source code (zip) / Source code (tar.gz)](https://github.com/JKooll/goto/releases) file.
 
-2. Open chrome extension management page [chrome://extensions/](chrome://extensions/).
+2. Unzip the file to a folder.
 
-3. Drag the goto.crx file to this page.
+3. Open chrome extension management page chrome://extensions/.
+
+4. Enable developer mode.
+
+5. Drag the extension folder to this page.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
